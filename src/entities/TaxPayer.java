@@ -30,6 +30,15 @@ public abstract class TaxPayer {
 	}
 	
 	public abstract double tax();
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(name + ": $ " + String.format("%.2f", tax()));
+		return sb.toString();
+	}
+	
+	
 	
 
 }
